@@ -1,4 +1,4 @@
-import sys
+"""Code to obtain picket spacing"""
 
 
 def get_picket_spacing(total_distance, num_of_pickets=2, picket_width=1.5):
