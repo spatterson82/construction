@@ -11,7 +11,6 @@ def get_picket_spacing(total_distance, num_of_pickets=2, picket_width=1.5):
         if spacing > 4:
             continue
         else:
-            # TODO convert decimal to eighths
             remainder = spacing % 1
             eighths = int(remainder / .06125)
             print('\npickets:', num_of_pickets - 1)
