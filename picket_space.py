@@ -11,11 +11,14 @@ def get_picket_spacing(total_distance, num_of_pickets=2, picket_width=1.5):
         if spacing > 4:
             continue
         else:
-            print('pickets:', num_of_pickets - 1)
-            print('spacing:', str(spacing) + "\n")
+            # TODO convert decimal to eighths
+            remainder = spacing % 1
+            eighths = int(remainder / .06125)
+            print('\npickets:', num_of_pickets - 1)
+            print(f'spacing: {str(int(spacing))} and {eighths}/16"')
 
 
 if __name__ == "__main__":
     cedar_blocks = 5
-    total_distance = float(sys.argv[1]) - cedar_blocks
+    total_distance = float(input('Distance between posts:'))
     get_picket_spacing(total_distance)
